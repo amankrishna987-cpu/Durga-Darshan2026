@@ -70,22 +70,27 @@ if (
     });
 }
 
+
 document.querySelectorAll(".pandal-video").forEach(function (video) {
     const message = video.nextElementSibling;
 
     function showComingSoon() {
         video.style.display = "none";
-        message.style.display = "block";
+
+        if (message) {
+            message.style.display = "block";
+        }
     }
 
     video.addEventListener("error", showComingSoon);
 
-    //const source = video.querySelector("source");
-    //source.addEventListener("error", showComingSoon);
+    const source = video.querySelector("source");
+
     if (source) {
-    source.addEventListener("error", showComingSoon);
-}
+        source.addEventListener("error", showComingSoon);
+    }
 });
+
 
 const searchInput = document.getElementById("area-search");
 const searchResults = document.getElementById("search-results");
