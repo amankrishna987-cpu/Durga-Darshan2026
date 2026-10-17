@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Durga Darshan 2026 | Bihar Sharif</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">🙏 Durga Darshan</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#areas">Explore Areas</a>
+            <a href="#about">About</a>
+            
+
+<div class="nav-search">
+    <div class="search-box">
+        <input
+            type="text"
+            id="area-search"
+            placeholder="🔎 Search mohalla..."
+            autocomplete="off"
+        >
+       <!-- <button type="button" id="search-button">Search</button>-->
+        <button type="button" id="search-button" aria-label="Search mohalla" title="Search">
+    🔍
+</button>
+    </div>
+
+    <div id="search-results"></div>
+</div>
+
+
+        </nav>
+    </header>
+
+
+    <!-- Main Welcome Section -->
+    <section class="hero">
+
+        <p>SHUBHO DURGA PUJA 2026</p>
+
+        <h1>Durga Darshan</h1>
+
+        <h2>Bihar Sharif, Nalanda</h2>
+
+        <p>
+            Discover the beauty of Maa Durga,
+            explore local pandals and celebrate
+            the spirit of Durga Puja.
+        </p>
+
+        <a href="#areas" class="explore-btn">
+            Explore Pandals ↓
+        </a>
+
+    </section>
+
+
+    <!-- Mohalla Directory -->
+    <section id="areas" class="areas-section">
+
+        <h2>Explore Your Neighbourhood</h2>
+
+        <p>
+            Choose a mohalla to explore its Durga Puja
+            pandals, idols, locations and celebrations.
+        </p>
+
+
+        <div class="area-container">
+
+            <a href="areas/neemganj.html" class="area-card">
+                <h3>Neemganj</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/badi-pahari.html" class="area-card">
+                <h3>Badi Pahari</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/bhainsasur.html" class="area-card">
+                <h3>Bhainsasur</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/mahalpar.html" class="area-card">
+                <h3>Mahalpar</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/khandakpar.html" class="area-card">
+                <h3>Khandakpar</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/mohaddi-nagar.html" class="area-card">
+                <h3>Mohaddi Nagar</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/pulpar.html" class="area-card">
+                <h3>Pulpar</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/laheri-mohalla.html" class="area-card">
+                <h3>Laheri Mohalla</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/Soh-sarai.html" class="area-card">
+                <h3>Soh-sarai</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/saluganj-mohalla.html" class="area-card">
+                <h3>Saluganj Mohalla</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/atwari-bazar.html" class="area-card">
+                <h3>Atwari Bazar</h3>
+                <p>Explore Area →</p>
+            </a>
+
+            <a href="areas/amber.html" class="area-card">
+                <h3>Amber</h3>
+                <p>Explore Area →</p>
+            </a>
+
+        </div>
+
+        <p class="note">
+            More neighbourhoods will be added soon.
+        </p>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+
+        <h2>About Durga Darshan</h2>
+
+        <p>
+            Durga Darshan is a local guide designed
+            to help people discover Durga Puja pandals,
+            Maa Durga idols, locations, timings and
+            festive attractions across Bihar Sharif.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>Made with ❤️ for Durga Puja 2026</p>
+
+        <p>Bihar Sharif, Nalanda, Bihar</p>
+
+    </footer>
+<!-- Home Page Background Music -->
+<audio id="home-music" loop>
+    <source src="audio/neemganj.mp3" type="audio/mpeg">
+</audio>
+
+<button id="home-music-toggle" type="button">
+    🔊 Play Bhajan
+</button>
+
+<script>
+const homeMusic = document.getElementById("home-music");
+const homeMusicToggle = document.getElementById("home-music-toggle");
+
+homeMusicToggle.addEventListener("click", function () {
+    if (homeMusic.paused) {
+        homeMusic.play()
+            .then(function () {
+                homeMusicToggle.textContent = "⏸ Pause Bhajan";
+            })
+            .catch(function () {
+                homeMusicToggle.textContent = "🔊 Play Bhajan";
+            });
+    } else {
+        homeMusic.pause();
+        homeMusicToggle.textContent = "🔊 Play Bhajan";
+    }
+});
+
+// Home page khulte hi music play karne ki koshish
+homeMusic.play()
+    .then(function () {
+        homeMusicToggle.textContent = "⏸ Pause Bhajan";
+    })
+    .catch(function () {
+        // Browser autoplay block kare toh button ready rahega
+        homeMusicToggle.textContent = "🔊 Play Bhajan";
+    });
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
