@@ -80,8 +80,11 @@ document.querySelectorAll(".pandal-video").forEach(function (video) {
 
     video.addEventListener("error", showComingSoon);
 
-    const source = video.querySelector("source");
+    //const source = video.querySelector("source");
+    //source.addEventListener("error", showComingSoon);
+    if (source) {
     source.addEventListener("error", showComingSoon);
+}
 });
 
 const searchInput = document.getElementById("area-search");
@@ -268,6 +271,8 @@ function updateDarshanCountdown() {
     }
 
     const now = Date.now();
+    console.log("Current time:", new Date(now).toString());
+console.log("Current time in India:", new Date(now).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }));
     const difference = darshanOpeningTime - now;
 
     // Update the tithi status
