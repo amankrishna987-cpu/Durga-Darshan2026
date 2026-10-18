@@ -108,7 +108,8 @@ const areas = [
     { name: "Saluganj Mohalla", url: "areas/saluganj-mohalla.html" },
     { name: "Atwari Bazar", url: "areas/atwari-bazar.html" },
     { name: "Soh-Sarai", url: "areas/soh-sarai.html" },
-    { name: "Amber", url: "areas/amber.html" }
+    { name: "Amber", url: "areas/amber.html" },
+    { name: "Aalamganj", url: "areas/Aalamganj.html"},
 ];
 
 
