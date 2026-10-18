@@ -356,3 +356,7 @@ if (countdownElement) {
     updateDarshanCountdown();
     setInterval(updateDarshanCountdown, 1000);
 }
+
+
+console.log("Script.js loaded successfully");
+console.log("Search input:", document.getElementById("area-search"));
