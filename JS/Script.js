@@ -68,7 +68,7 @@ if (
 
         showPhoto(prevIndex);
     });
-}
+}// yahan tak photo ko bada krne wala code h 
 
 
 document.querySelectorAll(".pandal-video").forEach(function (video) {
