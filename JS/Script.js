@@ -111,6 +111,7 @@ const areas = [
     { name: "Amber", url: "areas/amber.html" },
     { name: "Aalamganj", url: "areas/Aalamganj.html"},
     { name: "nai-sarai", url: "areas/nai-sarai.html"},
+    { name: "Sahokhar", url: "areas/Sahokhar.html"},
 ];
 
 
