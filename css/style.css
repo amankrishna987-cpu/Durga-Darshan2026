@@ -984,3 +984,20 @@ img {
     height: auto;
     border: none;
 }
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-container iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+}
+
