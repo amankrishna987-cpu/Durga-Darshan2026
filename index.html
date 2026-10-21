@@ -20,24 +20,19 @@
             <a href="index.html">Home</a>
             <a href="#areas">Explore Areas</a>
             <a href="#about">About</a>
-            
 
-<div class="nav-search">
-    <div class="search-box">
-        <input
-            type="text"
-            id="area-search"
-            placeholder="🔎 Search mohalla..."
-            autocomplete="off"
-        >
-       <!-- <button type="button" id="search-button">Search</button>-->
-        <button type="button" id="search-button" aria-label="Search mohalla" title="Search">
-    🔍
-</button>
-    </div>
 
-    <div id="search-results"></div>
-</div>
+            <div class="nav-search">
+                <div class="search-box">
+                    <input type="text" id="area-search" placeholder="🔎 Search mohalla..." autocomplete="off">
+                    <!-- <button type="button" id="search-button">Search</button>-->
+                    <button type="button" id="search-button" aria-label="Search mohalla" title="Search">
+                        🔍
+                    </button>
+                </div>
+
+                <div id="search-results"></div>
+            </div>
 
 
         </nav>
@@ -63,6 +58,26 @@
             Explore Pandals ↓
         </a>
 
+    </section>
+
+    <!-- Featured Performance Section -->
+    <section class="featured-performance">
+        <div class="performance-content">
+            <span class="performance-badge">
+                ✨ SPECIAL PERFORMANCE ✨
+            </span>
+
+            <h2>Ye Performance Zaroor Dekhein!</h2>
+
+            <p>
+                💃 Sanjay Kumar Disco ki special dance performance dekhein
+                aur Durga Puja ka festive josh experience karein!
+            </p>
+
+            <a href="areas/daak-bunglow.html" class="performance-button">
+                ▶ WATCH PERFORMANCE NOW
+            </a>
+        </div>
     </section>
 
 
@@ -149,7 +164,7 @@
                 <h3>Sahokhar</h3>
                 <p>Explore Area →</p>
             </a>
-            
+
 
         </div>
 
@@ -184,44 +199,45 @@
         <p>Developed by:- Aman Krishna </p>
 
     </footer>
-<!-- Home Page Background Music -->
-<audio id="home-music" loop>
-    <source src="audio/neemganj.mp3" type="audio/mpeg">
-</audio>
+    <!-- Home Page Background Music -->
+    <audio id="home-music" loop>
+        <source src="audio/neemganj.mp3" type="audio/mpeg">
+    </audio>
 
-<button id="home-music-toggle" type="button">
-    🔊 Play Bhajan 
-</button>
+    <button id="home-music-toggle" type="button">
+        🔊 Play Bhajan
+    </button>
 
-<script>
-const homeMusic = document.getElementById("home-music");
-const homeMusicToggle = document.getElementById("home-music-toggle");
+    <script>
+        const homeMusic = document.getElementById("home-music");
+        const homeMusicToggle = document.getElementById("home-music-toggle");
 
-homeMusicToggle.addEventListener("click", function () {
-    if (homeMusic.paused) {
+        homeMusicToggle.addEventListener("click", function () {
+            if (homeMusic.paused) {
+                homeMusic.play()
+                    .then(function () {
+                        homeMusicToggle.textContent = "⏸ Pause Bhajan";
+                    })
+                    .catch(function () {
+                        homeMusicToggle.textContent = "🔊 Play Bhajan";
+                    });
+            } else {
+                homeMusic.pause();
+                homeMusicToggle.textContent = "🔊 Play Bhajan";
+            }
+        });
+
+        // Home page khulte hi music play karne ki koshish
         homeMusic.play()
             .then(function () {
                 homeMusicToggle.textContent = "⏸ Pause Bhajan";
             })
             .catch(function () {
+                // Browser autoplay block kare toh button ready rahega
                 homeMusicToggle.textContent = "🔊 Play Bhajan";
             });
-    } else {
-        homeMusic.pause();
-        homeMusicToggle.textContent = "🔊 Play Bhajan";
-    }
-});
-
-// Home page khulte hi music play karne ki koshish
-homeMusic.play()
-    .then(function () {
-        homeMusicToggle.textContent = "⏸ Pause Bhajan";
-    })
-    .catch(function () {
-        // Browser autoplay block kare toh button ready rahega
-        homeMusicToggle.textContent = "🔊 Play Bhajan";
-    });
-</script>
-<script src="JS/Script.js"></script>
+    </script>
+    <script src="JS/Script.js"></script>
 </body>
+
 </html>
