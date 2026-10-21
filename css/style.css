@@ -958,3 +958,15 @@ img {
         font-size: 15px;
     }
 }
+.video-container {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    border-radius: 12px;
+}
