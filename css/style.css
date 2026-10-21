@@ -970,3 +970,17 @@ img {
     border: none;
     border-radius: 12px;
 }
+
+.youtube-video {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.youtube-video iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+}
