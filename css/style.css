@@ -958,18 +958,19 @@ img {
         font-size: 15px;
     }
 }
-.video-container {
-    max-width: 900px;
-    margin: 20px auto;
-}
 
-.video-container iframe {
+.video-container {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    border: none;
+    max-width: 600px;
+    margin: 25px auto;
+    overflow: hidden;
     border-radius: 12px;
 }
+
+.video-container .sp-embed-player {
+    width: 100%;
+}
+
 
 .youtube-video {
     width: 100%;
